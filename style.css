@@ -1,0 +1,93 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Roboto";
+    vertical-align: baseline;
+    line-height: 1.5;
+    font-size:1rem;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.items{
+    display: flex;
+    height: 100%;
+}
+
+.item1{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS25kVh-3UXdWtGWPg6pLnPGU-vZsS7NC5YHRfPQTktUUjJ2FK4")
+}
+.item2 {
+    background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
+}
+.item3{
+    background-image: url("https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg")
+}
+.item4{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQboEe2gL5vYuwyOd4sy0i9iVWf1JqJuXBZ934eL8fjkfk8Ojib")
+}
+.item5{
+    background-image: url("https://www.elastic.co/assets/bltada7771f270d08f6/enhanced-buzz-1492-1379411828-15.jpg")
+}
+
+
+.item {
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition: 
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item > * {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    transition: transform 0.5s;
+}
+
+.item > *:first-child{
+    transform: translateY(-100%)
+}
+.item.open-active>*:first-child {
+    transform: translateY(0)
+}
+.item > *:last-child{
+    transform: translateY(100%)
+}
+.item.open-active>*:last-child {
+    transform: translateY(0)
+}
+.item.open{
+    font: 100px;
+    flex: 5;
+}
